@@ -12,7 +12,7 @@ public class SpeedRacerAnswer : MonoBehaviour
     
     float maxAcceleration = 0.98f;
 
-    bool isCarTypeSidan = false;
+    bool isCarTypeSedan = false;
     bool hasFrontEngine = true;
 
 
@@ -69,23 +69,23 @@ public class SpeedRacerAnswer : MonoBehaviour
         return 2021 - yearMade;
     }
 
-    // Check if the car is a sidan type, or if it has a front engine.
+    // Check if the car is a sedan type, or if it has a front engine.
     string CheckCharacteristics()
     {
-        /* First check if the car is a sidan. If not, then check if it has a front engine.
+        /* First check if the car is a sedan. If not, then check if it has a front engine.
          * Notice in the Console window how only one message is shown. Depending on which check is passed, only one block will be triggered.
          */
-        if (isCarTypeSidan)
+        if (isCarTypeSedan)
         {
-            return "The car is a sidan type.";
+            return "The car is a sedan type.";
 
         } else if (hasFrontEngine)
         {
-            return "The car is not a sidan, but has a front engine.";
+            return "The car is not a sedan, but has a front engine.";
         
         } else
         {
-            return "The car is neither a sidan, nor is its engine a front engine.";
+            return "The car is neither a sedan, nor is its engine a front engine.";
         }
     }
 }
