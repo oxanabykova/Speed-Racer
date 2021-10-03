@@ -1,6 +1,12 @@
 using UnityEngine;
 
-public class SpeedRacerAnswer : MonoBehaviour
+/************************************************
+ * _______   BASICS OF GAME DEVELOPMENT   _______
+ * _______    ANSWER OF ASSIGNMENT 3.1    _______
+ * 
+ ***********************************************/
+
+public class AnswerAssignment3_1 : MonoBehaviour
 {
     // Declare and initialise the car's information
 
