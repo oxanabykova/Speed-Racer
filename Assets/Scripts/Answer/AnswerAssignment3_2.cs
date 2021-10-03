@@ -44,7 +44,7 @@ public class AnswerAssignment3_2 : MonoBehaviour
     void Start()
     {
         // Show in Console the car model and engine type. Use the + sign to combine (concatenate) regular text with variable names
-        print("The racer model is " + carModel + "by " + carMaker + ". It has a " + engineType + " engine.");
+        print("The racer model is " + carModel + " by " + carMaker + ". It has a " + engineType + " engine.");
 
         // Check if the car weighs less than 1500 kg.
         // This is a function call to the function named 'CheckWeight', which is defined further below
