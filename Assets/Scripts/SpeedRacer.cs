@@ -22,7 +22,25 @@ public class SpeedRacer : MonoBehaviour
     {
         print($"The car model is {carModel} with an engine of type {engineType}");
 
+        //check car's weight
         CheckWeight();
+
+        //checking if car was introduced after 2010
+        if(yearMade <= 2009)
+        {
+            int carAge = CalculateAge(yearMade);
+
+            print($"This car was made in the year {yearMade}");
+
+            print($"This car is {carAge} years old");
+        }
+        else
+        {
+            print("This car was probably introduced in the 2010s");
+
+            print($"This car has a maximum acceleration of {maxAcceleration}, woo crazy fast / slow, I dunno!");
+        }
+
 
     }
 
