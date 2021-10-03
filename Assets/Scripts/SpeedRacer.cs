@@ -20,7 +20,10 @@ public class SpeedRacer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        print($"The car model is {carModel} with an engine of type {engineType}");
+
+        CheckWeight();
+
     }
 
     // Update is called once per frame
@@ -28,4 +31,22 @@ public class SpeedRacer : MonoBehaviour
     {
        
     }
+
+
+    //checks the car weight 
+    void CheckWeight()
+    {
+        int maxWeight = 1500;
+
+        if (carWeight < maxWeight)
+        {
+            print($"Car weight is less than {maxWeight}kg");
+        }
+        else
+        {
+            print($"Car weighs over {maxWeight}kg");
+        }
+
+    }
+
 }
