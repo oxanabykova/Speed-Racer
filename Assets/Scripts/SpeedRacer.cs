@@ -49,4 +49,9 @@ public class SpeedRacer : MonoBehaviour
 
     }
 
+    //calculates the age of the car
+    int CalculateAge(int yearMade)
+    {
+        return 2021 - yearMade;
+    }
 }
