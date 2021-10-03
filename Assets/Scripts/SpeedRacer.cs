@@ -41,6 +41,7 @@ public class SpeedRacer : MonoBehaviour
             print($"This car has a maximum acceleration of {maxAcceleration}, woo crazy fast / slow, I dunno!");
         }
 
+        print(CheckCharacteristics());
 
     }
 
@@ -71,5 +72,14 @@ public class SpeedRacer : MonoBehaviour
     int CalculateAge(int yearMade)
     {
         return 2021 - yearMade;
+    }
+
+    string CheckCharacteristics()
+    {
+        if (isCarTypeSedan) return "This is a Sedan Car";
+
+        if (hasFrontEngine) return "This isn't a Sedan Car, but it does have a front engine hm..";
+
+        return "This Car isn't a Sedan and doesn't have a front engine";
     }
 }
