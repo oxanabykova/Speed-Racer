@@ -2,18 +2,21 @@ using UnityEngine;
 
 public class SpeedRacer : MonoBehaviour
 {
-    string carModel = "GTR R35";
-    string engineType = " V6, Twin Turbo";
-    int carWeight = 1609;
-    int yearMade = 2009;
-    float maxAcceleration = 0.98f;
-    bool isCarTypeSedan = false;
-    bool hasFrontEngine = true;
 
-    // Start is called before the first frame update
+
+
+    public string carModel = " GTR R35";
+    public string carMaker;
+    public string engineType = " V6, Twin Turbo";
+    public int carWeight = 1609;
+    public int yearMade = 2009;
+    public float maxAcceleration = 0.98f;
+    public bool isCarTypeSedan = false;
+    public bool hasFrontEngine = true;    
+
     void Start()
     {
-        print(carModel + engineType);
+        print(carModel + carMaker + engineType);
         CheckWeight();
         print (CheckCharacteristics());
 
@@ -29,13 +32,18 @@ public class SpeedRacer : MonoBehaviour
             print("It's max acceleration is " + maxAcceleration);
         }
     }
-
-    // Update is called once per frame
     void Update()
     {
 
     }
-
+    void ConsumeFuel()
+    {
+        carFuel.fuelLevel = carFuel.fuelLevel - 10;
+    }
+    void CheckFuelLevel()
+    {
+        
+    }
     void CheckWeight()
     {
         if (carWeight < 1500)
