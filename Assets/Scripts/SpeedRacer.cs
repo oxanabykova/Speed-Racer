@@ -18,15 +18,17 @@ public class SpeedRacer : MonoBehaviour
 
         if(yearMade <= 2009)
         {
-            Debug.Log("the car was introduced in" + yearMade);
+            Debug.Log("the car was introduced in " + yearMade);
             int carAge = CalculateAge(yearMade);
-            Debug.Log("That makes it " + carAge + "years old.");
+            Debug.Log("That makes it " + carAge + " years old.");
         }
         else
         {
             Debug.Log("the car was introduced in the 2010’s");
             Debug.Log("Car´s maxium acceleration is " + maxAcceleration);
         }
+
+        Debug.Log(CheckCharacteristics());
     }
 
     // Update is called once per frame
@@ -39,16 +41,35 @@ public class SpeedRacer : MonoBehaviour
     {
         if (carWeight < 1500)
         {
-            Debug.Log("The " + carModel + "weights less than 1500 kg.");
+            Debug.Log("The " + carModel + " weights less than 1500 kg.");
         }
         else
         {
-            Debug.Log("The " + carModel + "weights over 1500 kg.");
+            Debug.Log("The " + carModel + " weights over 1500 kg.");
         }
     }
 
     private int CalculateAge(int pYearMade)
     {
         return 2021 - pYearMade;
+    }
+
+    private string CheckCharacteristics()
+    {
+        if(isCarTypeSedan)
+        {
+            return "The car is a sedan.";
+        }
+        else
+        {
+            if (hasFrontEngine)
+            {
+                return "The car is not a sedan, but has a front engine.";
+            }
+            else
+            {
+                return "The car is neither a sedan nor does it have a front engine.";
+            }
+        }
     }
 }
