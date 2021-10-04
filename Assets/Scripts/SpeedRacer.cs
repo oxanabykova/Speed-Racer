@@ -15,6 +15,18 @@ public class SpeedRacer : MonoBehaviour
     {
         Debug.Log("the racer model is " + carModel + ". It has a " + engineType + " engine.");
         CheckWeight();
+
+        if(yearMade <= 2009)
+        {
+            Debug.Log("the car was introduced in" + yearMade);
+            int carAge = CalculateAge(yearMade);
+            Debug.Log("That makes it " + carAge + "years old.");
+        }
+        else
+        {
+            Debug.Log("the car was introduced in the 2010’s");
+            Debug.Log("Car´s maxium acceleration is " + maxAcceleration);
+        }
     }
 
     // Update is called once per frame
