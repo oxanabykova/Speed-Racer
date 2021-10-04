@@ -43,7 +43,11 @@ public class SpeedRacer : MonoBehaviour
     }
     void Update()
     {
-
+        if (Input.GetButtonDown("Jump"))
+        {
+            ConsumeFuel();
+            CheckFuelLevel();
+        }
     }
     void ConsumeFuel()
     {
@@ -56,7 +60,7 @@ public class SpeedRacer : MonoBehaviour
             case 70:
                 print("fuel level is nearing two-thirds.");
                 break;
-            case 25:
+            case 50:
                 print("fuel level is at half amount.");
                 break;
             case 10:
@@ -64,6 +68,7 @@ public class SpeedRacer : MonoBehaviour
                 break;
             default:
                 print("Nothing to report");
+                break;
         }
     }
     void CheckWeight()
