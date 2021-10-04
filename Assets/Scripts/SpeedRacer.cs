@@ -2,9 +2,18 @@ using UnityEngine;
 
 public class SpeedRacer : MonoBehaviour
 {
+    public class Fuel
+    {
+        public int fuelLevel;
 
+        public Fuel(int amount)
+        {
+            fuelLevel = amount;
+        }
 
+    }
 
+    public Fuel carFuel = new Fuel(100);
     public string carModel = " GTR R35";
     public string carMaker;
     public string engineType = " V6, Twin Turbo";
