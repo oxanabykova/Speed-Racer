@@ -34,4 +34,9 @@ public class SpeedRacer : MonoBehaviour
             Debug.Log("The " + carModel + "weights over 1500 kg.");
         }
     }
+
+    private int CalculateAge(int pYearMade)
+    {
+        return 2021 - pYearMade;
+    }
 }
