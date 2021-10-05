@@ -54,7 +54,12 @@ public class SpeedRacer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        //The action gets activated if you press on the space bar
+        if (Input.GetKeyDown("space"))
+        {
+            ConsumeFuel();
+            CheckFuelLevel();
+        }
     }
 
     //Check if weight of the car is less or more than 1500
@@ -85,6 +90,32 @@ public class SpeedRacer : MonoBehaviour
             }
             else
                 return "The car is neither a sedan nor does it have a front engine.";
+        }
+    }
+
+    void ConsumeFuel()
+    {
+        //every time we invode the function the level of fuel will be reduced by 10
+        carFuel.fuelLevel -= 10;
+    }
+
+    void CheckFuelLevel()
+    {
+        switch(carFuel.fuelLevel)
+        {
+            case 70:
+                print("Fuel level is nearing two - thirds.");
+                break;
+            case 50:
+                print("Fuel level is at half amount.");
+                break;
+            case 10:
+                print("Warning! Fuel level is critically low.");
+                break;
+            default:
+                print("There’s nothing to report.");
+                break;
+
         }
     }
 
