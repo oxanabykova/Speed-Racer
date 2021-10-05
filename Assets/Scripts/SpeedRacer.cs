@@ -33,7 +33,11 @@ public class SpeedRacer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+       void ConsumeFuel()
+        {
+            carFuel.fuelLevel = carFuel.fuelLevel - 10;
+        }
+      
     }
     void CheckWeight()
     {
@@ -72,5 +76,6 @@ public class SpeedRacer : MonoBehaviour
         {
             fuelLevel = amount;
         }
-    } 
+    }
+    public Fuel carFuel = new Fuel(100);
 }
