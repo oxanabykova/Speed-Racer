@@ -76,9 +76,11 @@ public class SpeedRacer : MonoBehaviour
     public class Fuel
     {
         int fuelLevel;
-        Fuel(int pAmount)
+        public Fuel(int pAmount)
         {
             fuelLevel = pAmount;
         }
     }
+
+    Fuel carFuel = new Fuel(100);
 }
