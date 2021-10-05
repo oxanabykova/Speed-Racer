@@ -14,7 +14,7 @@ public class SpeedRacer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Car: "+carModel+" | Engine: "+engineType);
+        Debug.Log("Car: "+carModel+" | Brand: "+carMaker+" | Engine: "+engineType);
         CheckWeight();
         if (yearMade <= 2009)
         {
