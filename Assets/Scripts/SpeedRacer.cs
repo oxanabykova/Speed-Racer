@@ -21,6 +21,11 @@ public class SpeedRacer : MonoBehaviour
             int carAge = CalculateAge(yearMade);
             print("The age of the car is " + carAge);
         }
+        else
+        {
+            print("he car was introduced in the 2010’s");
+            print("the car’s maximum acceleration is " + maxAcceleration);
+        }
     }
 
     // Update is called once per frame
@@ -43,5 +48,19 @@ public class SpeedRacer : MonoBehaviour
    int CalculateAge(int yearMade)
     {
         return 2021 - yearMade;
+    }
+    string CheckCharacteristics()
+    {
+        if (isCarTypeSedan)
+        {
+            return "The car is a sedan";
+        } 
+        else if (hasFrontEngine) {
+            return "The car is not sedan, but it has a front engine";
+        }
+        else
+        {
+            return "The car is neither a sedan nor does it have a front engine";
+        }
     }
 }
