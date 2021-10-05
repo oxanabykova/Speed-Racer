@@ -73,9 +73,14 @@ public class SpeedRacer : MonoBehaviour
         }
     }
 
+    private void ConsumeFuel()
+    {
+        carFuel.fuelLevel =- 10;
+    }
+
     public class Fuel
     {
-        int fuelLevel;
+        public int fuelLevel;
         public Fuel(int pAmount)
         {
             fuelLevel = pAmount;
