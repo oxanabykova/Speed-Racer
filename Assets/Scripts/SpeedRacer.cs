@@ -34,7 +34,11 @@ public class SpeedRacer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ConsumeFuel();
+            CheckFuelLevel();
+        }
     }
 
     private void CheckWeight()
@@ -75,7 +79,7 @@ public class SpeedRacer : MonoBehaviour
 
     private void ConsumeFuel()
     {
-        carFuel.fuelLevel =- 10;
+        carFuel.fuelLevel -= 10;
     }
 
     private void CheckFuelLevel()
