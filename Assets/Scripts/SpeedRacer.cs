@@ -72,4 +72,13 @@ public class SpeedRacer : MonoBehaviour
             }
         }
     }
+
+    public class Fuel
+    {
+        int fuelLevel;
+        Fuel(int pAmount)
+        {
+            fuelLevel = pAmount;
+        }
+    }
 }
