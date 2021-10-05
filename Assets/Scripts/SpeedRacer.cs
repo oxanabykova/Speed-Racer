@@ -33,16 +33,11 @@ public class SpeedRacer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            ConsumeFuel();
-            CheckFuelLevel();
-        }
         void ConsumeFuel()
         {
             carFuel.fuelLevel = carFuel.fuelLevel - 10;
         }
-        void CheckFuelLeve()
+        void CheckFuelLevel()
         {
             switch (carFuel.fuelLevel)
             {
@@ -59,6 +54,11 @@ public class SpeedRacer : MonoBehaviour
                     print("there's nothing to report");
                     break;
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ConsumeFuel();
+            CheckFuelLevel();
         }
     }
     void CheckWeight()
