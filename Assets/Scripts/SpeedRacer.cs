@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class SpeedRacer : MonoBehaviour
 {
-    //variable declaration
+    //variable declaration A3.2
+    public string carMaker;
+
+    //variable declaration A3.1
     public string carModel = "GTR R35";
     public string engineType = "V6, Twin Turbo";
     public int carWeight = 1609;
@@ -11,11 +14,27 @@ public class SpeedRacer : MonoBehaviour
     public bool isCarTypeSedan = false;
     public bool hasFrontEngine = true;
 
+    //Declare class Fuel to store the fuel levels
+    public class Fuel
+    {
+        public int fuelLevel;
+
+        //Default constructor
+        public Fuel(int amount)
+        {
+            fuelLevel = amount;
+        }
+
+    }
+
+    //Declare a variable of type Fuel
+    public Fuel carFuel = new Fuel(100);
+
     // Start is called before the first frame update
     void Start()
     {
         //print car model and engine type
-        print("The racer model is " + carModel + ". It has a " + engineType + " engine.");
+        print("The racer model is " + carModel + carMaker + ". It has a " + engineType + " engine.");
         CheckWeight();
         if(yearMade <= 2009)
         {
