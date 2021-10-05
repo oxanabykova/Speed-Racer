@@ -65,4 +65,12 @@ public class SpeedRacer : MonoBehaviour
             return "The car is neither a sedan nor does it have a front engine";
         }
     }
+    public class Fuel
+    {
+        public int fuelLevel;
+        public Fuel (int amount)
+        {
+            fuelLevel = amount;
+        }
+    } 
 }
