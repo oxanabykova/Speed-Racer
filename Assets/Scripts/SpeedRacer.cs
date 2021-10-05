@@ -13,12 +13,25 @@ public class SpeedRacer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("Car: "+carModel+" | Engine: "+engineType);
+
     }
 
     // Update is called once per frame
     void Update()
     {
        
+    }
+    void CheckWeight()
+    {
+        if (carWeight < 1500)
+        {
+            print(carModel + "weighs less than 1500 kg");
+        } 
+        else 
+        {
+            print(carModel + "weighs over 1500 kg");
+        }
+        
     }
 }
