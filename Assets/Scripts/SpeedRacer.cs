@@ -26,6 +26,7 @@ public class SpeedRacer : MonoBehaviour
             print("he car was introduced in the 2010’s");
             print("the car’s maximum acceleration is " + maxAcceleration);
         }
+        print(CheckCharacteristics());
     }
 
     // Update is called once per frame
@@ -37,11 +38,11 @@ public class SpeedRacer : MonoBehaviour
     {
         if (carWeight < 1500)
         {
-            print(carModel + "weighs less than 1500 kg");
+            print(carModel + " weighs less than 1500 kg");
         } 
         else 
         {
-            print(carModel + "weighs over 1500 kg");
+            print(carModel + " weighs over 1500 kg");
         }
         
     }
