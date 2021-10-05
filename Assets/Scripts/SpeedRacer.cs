@@ -11,7 +11,7 @@ public class SpeedRacer : MonoBehaviour
     public bool isCarTypeSedan = false;
     public bool hasFrontEngine = true;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         Debug.Log("Car: "+carModel+" | Brand: "+carMaker+" | Engine: "+engineType);
@@ -33,7 +33,12 @@ public class SpeedRacer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       void ConsumeFuel()
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ConsumeFuel();
+            CheckFuelLevel();
+        }
+        void ConsumeFuel()
         {
             carFuel.fuelLevel = carFuel.fuelLevel - 10;
         }
