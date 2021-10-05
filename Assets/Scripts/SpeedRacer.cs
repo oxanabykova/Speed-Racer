@@ -78,6 +78,33 @@ public class SpeedRacer : MonoBehaviour
         carFuel.fuelLevel =- 10;
     }
 
+    private void CheckFuelLevel()
+    {
+        switch (carFuel.fuelLevel)
+        {
+            case 10:
+                {
+                    Debug.Log("Warning! Fuel level is critically low.");
+                    break;
+                }
+            case 50:
+                {
+                    Debug.Log("fuel level is at half amount.");
+                    break;
+                }
+            case 70:
+                {
+                    Debug.Log("fuel level is nearing two-thirds.");
+                    break;
+                }
+            default:
+                {
+                    Debug.Log("there’s nothing to report.");
+                    break;
+                }
+        }
+    }
+
     public class Fuel
     {
         public int fuelLevel;
