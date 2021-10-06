@@ -11,15 +11,18 @@ public class SpeedRacer : MonoBehaviour
     public bool hasFrontEngine = true;
     public string carMaker;
 
-    public class Fuel{
-        int fuelLevel;
+
+    public class Fuel {
+       public int fuelLevel;
 
         public Fuel(int amount){
             fuelLevel = amount;
         }
 
-        Fuel carFuel = new Fuel(100);
     }
+
+    public Fuel carFuel = new Fuel(100);
+
 
     // Start is called before the first frame update
     void Start()
@@ -64,9 +67,38 @@ public class SpeedRacer : MonoBehaviour
         return age;
     }
 
+    void ConsumeFuel(){
+        carFuel.fuelLevel -= 10;
+    }
+
+
     // Update is called once per frame
-    void Update()
-    {
-       
+    void Update(){
+        
+
+
+    void CheckFuelLevel(){
+        switch (carFuel.fuelLevel){
+            case 70:
+            print("fuel level is nearing two-thirds");
+            break;
+
+            case 50:
+            print("fuel level is at half amount.");
+            break;
+            
+            case 10:
+            print("Warning! Fuel level is critically low.");
+            break;
+
+            default:
+            print("nothing to report");
+            break;
+        }
+    }
+       if(Input.GetKeyDown(KeyCode.Space) == true){
+           ConsumeFuel();
+           CheckFuelLevel();
+       }
     }
 }
