@@ -18,6 +18,19 @@ public class SpeedRacer : MonoBehaviour
 
     public bool hasFrontEngine = true;
 
+    public class Fuel
+    {
+        int fuelLevel;
+
+        public Fuel(int amount)
+        {
+            fuelLevel = amount;
+        }
+
+    }
+
+    public Fuel carFuel = new Fuel(100);
+
     // Start is called before the first frame update
     void Start()
     {
