@@ -2,20 +2,21 @@ using UnityEngine;
 
 public class SpeedRacer : MonoBehaviour
 {
+    public string carMaker;
 
-    string carModel = "GTR R35";
+    public string carModel = "GTR R35";
 
-    string engineType = "V6, Twin Turbo";
+    public string engineType = "V6, Twin Turbo";
 
-    int carWeight = 1609;
+    public int carWeight = 1609;
 
-    int yearMade = 2009;
+    public int yearMade = 2009;
 
-    float maxAcceleration = 0.98f;
+    public float maxAcceleration = 0.98f;
 
-    bool isCarTypeSedan = false;
+    public bool isCarTypeSedan = false;
 
-    bool hasFrontEngine = true;
+    public bool hasFrontEngine = true;
 
     // Start is called before the first frame update
     void Start()
