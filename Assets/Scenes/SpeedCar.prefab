@@ -30,7 +30,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -5.31}
   m_LocalScale: {x: 2.0078, y: 0.8656, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7303029765249008526}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -108,11 +109,73 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 337bdcf9f01273449a5beb2e9a3f2e65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carMaker: 
-  carModel: GTR R35
-  engineType: V6, Twin Turbo
-  carWeight: 1609
-  yearMade: 2009
-  maxAcceleration: 0.98
+  carMaker: Lamborghini
+  carModel: Huracan Evo
+  engineType: Naturally Aspirated V10
+  carWeight: 1665
+  yearMade: 2019
+  maxAcceleration: 1.06
   isCarTypeSedan: 0
-  hasFrontEngine: 1
+  hasFrontEngine: 0
+--- !u!1001 &8648058018385181452
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3880091045696930077}
+    m_Modifications:
+    - target: {fileID: 2115988215186110592, guid: bf84a7f603c77d5449233c45daa3c54e, type: 3}
+      propertyPath: m_Name
+      value: RaceLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115988215186110594, guid: bf84a7f603c77d5449233c45daa3c54e, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115988215186110594, guid: bf84a7f603c77d5449233c45daa3c54e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115988215186110594, guid: bf84a7f603c77d5449233c45daa3c54e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115988215186110594, guid: bf84a7f603c77d5449233c45daa3c54e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115988215186110594, guid: bf84a7f603c77d5449233c45daa3c54e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92387956
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115988215186110594, guid: bf84a7f603c77d5449233c45daa3c54e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.38268343
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115988215186110594, guid: bf84a7f603c77d5449233c45daa3c54e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115988215186110594, guid: bf84a7f603c77d5449233c45daa3c54e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115988215186110594, guid: bf84a7f603c77d5449233c45daa3c54e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115988215186110594, guid: bf84a7f603c77d5449233c45daa3c54e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115988215186110594, guid: bf84a7f603c77d5449233c45daa3c54e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bf84a7f603c77d5449233c45daa3c54e, type: 3}
+--- !u!4 &7303029765249008526 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2115988215186110594, guid: bf84a7f603c77d5449233c45daa3c54e, type: 3}
+  m_PrefabInstance: {fileID: 8648058018385181452}
+  m_PrefabAsset: {fileID: 0}

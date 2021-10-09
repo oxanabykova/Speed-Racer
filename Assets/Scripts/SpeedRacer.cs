@@ -21,7 +21,7 @@ public class SpeedRacer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        print($"The car model is {carModel} with an engine of type {engineType}");
+        print($"The car model is {carModel}, {carMaker} car, with a {engineType} engine type");
 
         //check car's weight
         CheckWeight();
