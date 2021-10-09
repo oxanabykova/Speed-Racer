@@ -18,6 +18,7 @@ public class SpeedRacer : MonoBehaviour
 
     public bool hasFrontEngine = true;
 
+    //A class that holds all properties and function of the car's fuel tank
     public class Fuel
     {
         public int fuelLevel;
@@ -62,14 +63,21 @@ public class SpeedRacer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ConsumeFuel();
+            CheckFuelLevel();
+        }
     }
 
+    //updates fuel level based on car fuel consumption
     void ConsumeFuel()
     {
         carFuel.fuelLevel -= 10; 
     }
 
+
+    //notifies client on specific fuel level  
     void CheckFuelLevel()
     {
         int currentFuelLevel = carFuel.fuelLevel;
