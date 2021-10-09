@@ -21,11 +21,48 @@ public class SpeedRacer : MonoBehaviour
     //A class that holds all properties and function of the car's fuel tank
     public class Fuel
     {
-        public int fuelLevel;
+        //private property
+        int fuelLevel;
 
         public Fuel(int amount)
         {
             fuelLevel = amount;
+        }
+
+        //public property accessors
+        public int getFuelLevel() => fuelLevel;
+
+        public void setFuelLevel(int amount) => fuelLevel = amount;
+
+
+        //updates fuel level based on car fuel consumption
+        public void ConsumeFuel()
+        {
+            fuelLevel -= 10;
+        }
+
+        //notifies client on specific fuel level  
+        public void CheckFuelLevel()
+        {
+            switch (fuelLevel)
+            {
+                case 70:
+                    print("fuel level is nearing two - thirds.");
+                    break;
+
+                case 50:
+                    print("fuel level is at half amount");
+                    break;
+
+                case 10:
+                    print("Warning! Fuel level is critically low.");
+                    break;
+
+                default:
+                    print("There is nothing to report.");
+                    break;
+
+            }
         }
 
     }
@@ -65,44 +102,10 @@ public class SpeedRacer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            ConsumeFuel();
-            CheckFuelLevel();
+            carFuel.ConsumeFuel();
+            carFuel.CheckFuelLevel();
         }
     }
-
-    //updates fuel level based on car fuel consumption
-    void ConsumeFuel()
-    {
-        carFuel.fuelLevel -= 10; 
-    }
-
-
-    //notifies client on specific fuel level  
-    void CheckFuelLevel()
-    {
-        int currentFuelLevel = carFuel.fuelLevel;
-
-        switch (currentFuelLevel)
-        {
-            case 70:
-                print("fuel level is nearing two - thirds.");
-                break;
-
-            case 50:
-                print("fuel level is at half amount");
-                break;
-
-            case 10:
-                print("Warning! Fuel level is critically low.");
-                break;
-
-            default:
-                print("There is nothing to report.");
-                break;
-
-        }
-    }
-
 
     //checks the car weight 
     void CheckWeight()
