@@ -17,15 +17,15 @@ public class SpeedRacer : MonoBehaviour
 
     public class Fuel
     {
-        int fuelLevel;
+        public int fuelLevel;
 
         public Fuel(int amount)
         {
             fuelLevel = amount;
         }
-
-        public Fuel carFuel = new Fuel(100);
     }
+
+    public Fuel carFuel = new Fuel(100);
 
     void Start()
     {
@@ -34,10 +34,10 @@ public class SpeedRacer : MonoBehaviour
         print("The car engine type is " + engineType + ".");
 
         CheckWeight();
-        
+
         if (yearMade <= 2009)
         {
-            print("The car was introduced in " + yearMade +".");
+            print("The car was introduced in " + yearMade + ".");
             int carAge = CalculateAge(yearMade);
             print("The car is " + carAge + " year old.");
         }
@@ -69,11 +69,11 @@ public class SpeedRacer : MonoBehaviour
 
     string CheckCharacteristics()
     {
-        if(isCarTypeSedan)
+        if (isCarTypeSedan)
         {
             return "The car type is Sedan.";
         }
-        else if(hasFrontEngine)
+        else if (hasFrontEngine)
         {
             return "The car is not a sedan, but has a front engine.";
         }
@@ -82,4 +82,40 @@ public class SpeedRacer : MonoBehaviour
             return "The car is neither a sedan nor does it have a front engine.";
         }
     }
+
+    void ConsumeFuel()
+    {
+        carFuel.fuelLevel = carFuel.fuelLevel - 10;
+    }
+
+    void CheckFuelLevel()
+    { 
+        switch(carFuel.fuelLevel)
+        {
+        case 70:
+            print("fuel level is nearing two-thirds.");
+            break;
+        case 50:
+            print("fuel level is at half amount.");
+            break;
+        case 10:
+            print("Warning! Fuel level is critically low!");
+            break;
+        default:
+            print("There’s nothing to report");
+            break;
+        }
+    }
+    
+    void Update()
+    {
+        bool down = Input.GetKeyDown(KeyCode.Space);
+        if (down)
+        {
+            ConsumeFuel();
+            CheckFuelLevel();
+        }
+
+    }
+
 }
