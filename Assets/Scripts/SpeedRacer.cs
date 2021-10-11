@@ -15,6 +15,18 @@ public class SpeedRacer : MonoBehaviour
 
     public string carMaker;
 
+    public class Fuel
+    {
+        int fuelLevel;
+
+        public Fuel(int amount)
+        {
+            fuelLevel = amount;
+        }
+
+        public Fuel carFuel = new Fuel(100);
+    }
+
     void Start()
     {
         print("The car is produced by " + carMaker + ".");
